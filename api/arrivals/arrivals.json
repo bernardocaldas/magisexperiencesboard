@@ -1,4 +1,4 @@
-[
+{"data": [
     {
       "flight": "PT_EC01",
       "scheduled": "06h25",
@@ -395,3 +395,4 @@
       "city": "Vila MAGIS - Estanislau"
     }
    ]
+}
