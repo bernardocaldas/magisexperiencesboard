@@ -1,5 +1,5 @@
 import logging
-
+import json
 import azure.functions as func
 
 
@@ -10,9 +10,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     # read the arrivals.json file
     with open('arrivals.json') as json_file:
         data = json_file.read()
+        arrivals = json.loads(data)
 
     # return the contents of arrivals.json file as json
-    return func.HttpResponse(data, mimetype="application/json")
+    return func.HttpResponse(arrivals, mimetype="application/json")
 
 
 
