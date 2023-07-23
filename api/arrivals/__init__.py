@@ -14,7 +14,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         arrivals = json.loads(data)
 
     # return the contents of arrivals.json file as json
-    return func.HttpResponse(json.dump(arrivals), mimetype="application/json")
+    return func.HttpResponse(json.dumps(arrivals), mimetype="application/json")
 
 
 
